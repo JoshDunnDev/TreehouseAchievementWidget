@@ -1,0 +1,446 @@
+/* ----- App ----- */
+@font-face{
+    font-family: 'Gotham Rounded Medium';
+    src: url('../font/GothamRoundedMedium_21022.ttf');
+}
+
+@font-face{
+    font-family: 'Gotham Rounded Book';
+    src: url('../font/GothamRoundedBook_21018.ttf');
+}
+
+#app {
+	font-family: 'Gotham Rounded Medium', Helvetica, Arial, sans-serif;
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+}
+
+#app h3 {
+	font-family: 'Gotham Rounded Book', Helvetica, Arial, sans-serif;
+}
+
+.loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #3e474f;
+	color: #b2bbbd;
+}
+
+.loading-text {
+	text-align: center;
+}
+
+.loading-text h1 {
+	font-size: 50px;
+	padding: 25px;
+}
+
+.loader-img {
+  max-width: 100%;
+}
+
+.container {
+	padding: 0 15px;
+}
+
+.app-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #3e474f;
+	color: #b2bbbd;
+}
+
+.treehouse-logo-img {
+	max-width: 40px;
+}
+
+.app-title {
+	margin-left: 5px;
+}
+
+.app-title h1 {
+	font-size: 16px;
+}
+
+.profile-photo {
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.profile-photo-img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.profile-name {
+	text-align: center;
+	padding-top: 25px;
+	border-bottom: 1px solid #eee;
+}
+
+.profile-name h1{
+	color: #5a6772;
+	font-size: 24px;
+}
+
+.profile-name.line-break {
+	margin-bottom: 30px;
+	padding-bottom: 25px;
+}
+
+.totals-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;;
+	border-bottom: 1px solid #eee;
+}
+
+.totals-container.line-break {
+	margin-bottom: 30px;
+	padding-bottom: 25px;
+}
+
+.points-total {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.points-total h2 {
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
+.points-total h3 {
+	color: #b7c0c7;
+	font-size: 14px;
+}
+
+.achievement-total {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.achievement-total h2 {
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
+.achievement-total h3 {
+	color: #b7c0c7;
+	font-size: 14px;
+}
+
+.points-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+
+.points-container.line-break {
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+}
+
+.profile-points {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 18px;
+	width: 100%;
+}
+
+.profile-points-data {
+	flex-basis: calc(50% - 15px);
+
+	margin-bottom: 25px;
+	padding-left: 10px;
+}
+
+.profile-points-data .points h2 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.profile-points-data .points h3 {
+	color: #a9b3bb;
+	font-size: 14px;
+}
+
+.points-data {
+	display: flex;
+}
+
+.achievement-box {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.achievement-box.line-break {
+	margin-bottom: 30px;
+	padding-bottom: 25px;
+}
+
+.achievement {
+	text-align: center;
+	width: 70px;
+	height: 70px;
+}
+
+.achievement-img {
+	max-height: 100%;
+}
+
+.achievement-data {
+	margin-left: 10px;
+}
+
+.achievement-title h1 {
+	color: #7b8b8e;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.achievement-title h2 {
+	font-family: 'Gotham Rounded Medium', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.achievement-title h3 {
+	color: #c6ccd2;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.achievement-date h1 {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.achievement-date h2 {
+	color: #c6ccd2;
+	font-family: 'Gotham Rounded Book', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+}
+
+.view-all-container {
+	text-align: center;
+	vertical-align: middle;
+	margin-top: -25px;
+}
+
+.view-all-container a {
+	color: #333;
+	text-decoration: none;
+}
+
+.view-all-container div {
+	padding: 15px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/* ----- Colored Bullets ----- */
+.Android,
+.Business,
+.C\#,
+.CSS,
+.Databases,
+.Design,
+.Development,
+.Digital,
+.Game,
+.HTML,
+.Java,
+.JavaScript,
+.PHP,
+.Python,
+.Ruby,
+.WordPress,
+.iOS {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.Android {
+	background-color: #5cb860;
+}
+
+.Business {
+	background-color: #f9845b;
+}
+
+.C\# {
+	background-color: #9e4d83;
+}
+
+.CSS {
+	background-color: #3079ab;
+}
+
+.Databases {
+	background-color: #eb7728;
+}
+
+.Design {
+	background-color: #e59a13;
+}
+
+.Development {
+	background-color: #637a91;
+}
+
+.Digital {
+	background-color: #c38cd4;
+}
+
+.Game {
+	background-color: #20898c;
+}
+
+.HTML {
+	background-color: #39add1;
+}
+
+.Java {
+	background-color: #2c9676;
+}
+
+.JavaScript {
+	background-color: #c25975;
+}
+
+.PHP {
+	background-color: #7d669e;
+}
+
+.Python {
+	background-color: #f092b0;
+}
+
+.Ruby {
+	background-color: #e15258;
+}
+
+.WordPress {
+	background-color: #838cc7;
+}
+
+.iOS {
+	background-color: #53bbb4;
+}
+
+
+/* ----- Media Queries ----- */
+@media (min-width: 569px) {
+
+	.top-section {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid #eee;
+	}
+
+	.top-section.line-break {
+		margin-bottom: 30px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	.totals-container {
+		display: block;
+	}
+
+	.achievement-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.achievement-box {
+		flex-basis: 33.33333%;
+	}
+
+	.achievement-data {
+    margin-left: 5px;
+    margin-right: 5px;
+	}
+
+	.photo-name {
+		flex-basis: 25%;
+	}
+
+	.profile-name {
+		padding-top: 10px;
+		border-bottom: none;
+	}
+
+	.profile-photo {
+		padding-top: 0;
+	}
+
+	.profile-name.line-break {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.totals-container {
+		flex-basis: 25%;
+		border-bottom: none;
+		margin: 0 25px 0 0;
+	}
+
+	.totals-container.line-break {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.points-container {
+		flex-basis: 50%;
+		border-bottom: none;
+		padding-top: 15px;
+	}
+
+	.points-container.line-break {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.points-total {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+}
+
+@media (min-width: 900px) {
+	.achievement-box .achievement-data {
+		padding-right: 30px;
+	}
+
+	.achievement-box:nth-child(3n) .achievement-data {
+		padding-right: 0;
+	}
+
+	.points-container {
+		margin-left: 25px;
+	}
+
+
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+}

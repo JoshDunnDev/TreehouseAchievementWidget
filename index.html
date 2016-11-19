@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Treehouse Achievement Widget</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<!-- Must Include app.css -->
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<!-- Copy Code From Here Down -->
+		<div class="wrapper" ng-app="treehouseAchievementWidget" ng-cloak>
+			<div id="app" ng-controller="loadCtrl">
+				<div class="loader" ng-show="loading">
+				  <div class="treehouse-logo">
+				    <img class="treehouse-logo-img" src="img/Treehouse-Logo.png" />
+				  </div>
+				  <div class="app-title">
+				    <h1>Loading Achievements</h1>
+				  </div>
+				</div>
+
+				<div class="container" ng-show="loading">
+				  <div class="loading-text">
+				    <img class="loader-img" src="img/Loading_icon.gif" />
+				  </div>
+				</div>
+
+				<div class="controller" ng-controller="mainCtrl" ng-hide="loading">
+				  <div class="app-header">
+				    <div class="treehouse-logo">
+				      <img class="treehouse-logo-img" src="img/Treehouse-Logo.png" />
+				    </div>
+				    <div class="app-title">
+				      <h1>Treehouse Achievements</h1>
+				    </div>
+				  </div>
+
+				  <div class="container">
+
+				    <div class="top-section line-break">
+				      <div class="photo-name">
+				        <div class="profile-photo">
+				          <img class="profile-photo-img" ng-src='{{profile.gravatar_url}}' />
+				        </div>
+
+				        <div class="profile-name line-break">
+				          <h1>{{profile.name}}</h1>
+				        </div>
+				      </div>
+
+				      <div class="totals-container line-break">
+				        <div class="points-total">
+				          <h2>{{profile.points.total | number:0}}</h2>
+				          <h3>Total Points</h3>
+				        </div>
+				        <div class="achievement-total">
+				          <h2>{{badges.length | number:0}}</h2>
+				          <h3>Achievements</h3>
+				        </div>
+				      </div>
+
+				      <div class="points-container line-break">
+				        <div class="profile-points">
+				          <div class="profile-points-data" ng-repeat="point in points | limitTo: 4 | filter: greaterThan('points', 0)">
+				            <div class="points-data">
+				              <div class="bullet">
+				                <div class='{{point.skill}}'></div>
+				              </div>
+				              <div class="points">
+				                <h2>{{point.points | number:0}}</h2>
+				                <h3>{{point.skill}}</h3>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+
+				    <div class="achievement-container">
+				      <div class="achievement-box line-break" ng-repeat="badge in badges | limitTo: 3">
+				        <div class="achievement">
+				          <img class="achievement-img" ng-src='{{badge.icon_url}}' />
+				        </div>
+				        <div class="achievement-data">
+				          <div class="achievement-title">
+				            <h1>Achievement</h1>
+				            <h2>{{badge.name}}</h2>
+				            <h3>{{badge.courses[0].title}}</h3>
+				          </div>
+				          <div class="achievement-date">
+				            <h1>Achieved</h1>
+				            <h2>{{badge.earned_date | date: 'MMM d, y'}}</h2>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+
+				    <div class="view-all-container">
+				        <a href="{{profile.profile_url}}" target="_blank"><div>View All Achievements</div></a>
+				    </div>
+
+				  </div>
+				</div>
+			</div>
+		</div>
+		<!-- End Copy Here -->
+
+		<!-- Must Include Both Scripts -->
+		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+
+	</body>
+</html>
